@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Welcome</title>
+        <link rel="stylesheet" href="/css/highlight.css">
         <style>
             body {
                 font-family: sans-serif;
@@ -9,17 +10,38 @@
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
-                text-align: center;
+                background-color: #e4e4e4;
+            }
+
+            body > div {
+                flex: 1;
+                display: flex;
+                gap: 2rem;
+                padding: 2rem;
             }
 
             main {
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                width: 100%;
+                max-width: 600px;
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: white;
+            }
+
+            main > div {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            aside {
+                flex: 1;
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: white;
             }
 
             footer {
+                text-align: center;
                 background-color: #2e2e2e;
                 color: white;
                 padding: 1rem;
@@ -27,11 +49,35 @@
         </style>
     </head>
     <body>
-        <main>
-            <h1>{{ greeting }}</h1>
-        </main>
+        <div>
+            <main>
+                <h1>{{ greeting }}</h1>
+                <p>
+                    This is an interactive demonstration of <a href="https://github.com/RobertWesner/simple-mvc-php">robertwesner/simple-mvc-php</a>.<br>
+                    The source code for this demo is available on <a href="https://github.com/RobertWesner/simple-mvc-php-large-demo">GitHub</a>.
+                </p>
+                <p>
+                    Please have a look at the below examples to get a taste of all that is possible.
+                </p>
+                <div>
+                    Examples:
+                    <ul>
+                        <li><a href="/AMNSFSNDIUAHNISADNMSIJDNASDIHSAIUDNAIUSNINDASDUNDIH-WOW-THIS-IS-A-BIT-EXCESSIVE-AGMONDSNUIMCVOYXVOIUI">404 page</a></li>
+                        <li><a href="/spawner/">spawner-bundle example</a></li>
+                    </ul>
+                </div>
+            </main>
+            <aside>
+                <h2>Routing</h2>
+                <p>
+                    For your viewing pleasure, I have provided the <code>web.php</code> Routing to you directly here.
+                    Of course all the source is available in the aforementioned repository.
+                </p>
+                <pre><code class="hljs {{ webRoutes.language }}">{{ webRoutes.value|raw }}</code></pre>
+            </aside>
+        </div>
         <footer>
-            MVC Version <strong>{{ version }}</strong> powered by dependency injection <strong>{{ diVersion }}</strong>
+            MVC Version <strong>{{ versions.mvc }}</strong> powered by dependency injection <strong>{{ versions.di }}</strong>
         </footer>
     </body>
 </html>

@@ -1,13 +1,14 @@
 <h1 align="center">
-Simple MVC for PHP
+Simple MVC for PHP Demo
 </h1>
 
 <div align="center">
 
-![](https://img.shields.io/github/v/release/RobertWesner/simple-mvc-php-large-demo)
 [![License: GPL v3](https://img.shields.io/github/license/RobertWesner/simple-mvc-php-large-demo)](../../raw/main/LICENSE.txt)
 
 </div>
+
+The demo is hosted at [mvc.robert.wesner.io](https://mvc.robert.wesner.io).
 
 All encompassing demo for [robertwesner/simple-mvc-php](https://github.com/RobertWesner/simple-mvc-php) with [demo-bundle](https://github.com/RobertWesner/simple-mvc-php-demo-bundle).
 

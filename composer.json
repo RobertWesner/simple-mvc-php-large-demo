@@ -16,9 +16,11 @@
     ],
     "require": {
         "php": "^8.4",
-        "robertwesner/simple-mvc-php": "^v0.10.0",
+        "robertwesner/simple-mvc-php": "^v0.11.0",
         "robertwesner/dependency-injection": "^1.3.1",
-        "robertwesner/simple-mvc-php-demo-bundle": "^1.0"
+        "robertwesner/simple-mvc-php-demo-bundle": "^1.0.0",
+        "robertwesner/simple-mvc-php-spawner-bundle": "^v1.0.0",
+        "scrivo/highlight.php": "^9.18"
     },
     "replace": {
         "symfony/polyfill-php80": "*",

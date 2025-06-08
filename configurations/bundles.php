@@ -3,6 +3,7 @@
 use RobertWesner\SimpleMvcPhp\Configuration;
 use RobertWesner\SimpleMvcPhpDemoBundle\DemoBundle;
 use RobertWesner\SimpleMvcPhpDemoBundle\DemoBundleConfiguration;
+use RobertWesner\SimpleMvcPhpSpawnerBundle\SpawnerBundle;
 
 Configuration::BUNDLES
     ::load(
@@ -10,4 +11,5 @@ Configuration::BUNDLES
         new DemoBundleConfiguration(
             greeting: 'Hi',
         ),
-    );
+    )
+    ::load(SpawnerBundle::class);

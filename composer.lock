@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9e102821f4488000bb7882787734dc4",
+    "content-hash": "d83d1911cd21d2b29a1d90e423cf0c64",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -520,16 +520,16 @@
         },
         {
             "name": "robertwesner/simple-mvc-php",
-            "version": "v0.10.1",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobertWesner/simple-mvc-php.git",
-                "reference": "9588e3761b60a125bfe2ac1f5af5b94b2de82c11"
+                "reference": "f8967906bf0a9fc2f3c4f00a5263e902594bbcc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/9588e3761b60a125bfe2ac1f5af5b94b2de82c11",
-                "reference": "9588e3761b60a125bfe2ac1f5af5b94b2de82c11",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php/zipball/f8967906bf0a9fc2f3c4f00a5263e902594bbcc1",
+                "reference": "f8967906bf0a9fc2f3c4f00a5263e902594bbcc1",
                 "shasum": ""
             },
             "require": {
@@ -565,28 +565,28 @@
             "description": "A small library for creating PHP web servers.",
             "support": {
                 "issues": "https://github.com/RobertWesner/simple-mvc-php/issues",
-                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.10.1"
+                "source": "https://github.com/RobertWesner/simple-mvc-php/tree/v0.11.0"
             },
-            "time": "2025-06-04T17:44:01+00:00"
+            "time": "2025-06-08T14:29:19+00:00"
         },
         {
             "name": "robertwesner/simple-mvc-php-demo-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobertWesner/simple-mvc-php-demo-bundle.git",
-                "reference": "142b94e83f48e23101d52432b1c2eacbcbee1c64"
+                "reference": "2d0b0b4b24ef48c37f87e71bffefc7e2a16e5599"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php-demo-bundle/zipball/142b94e83f48e23101d52432b1c2eacbcbee1c64",
-                "reference": "142b94e83f48e23101d52432b1c2eacbcbee1c64",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php-demo-bundle/zipball/2d0b0b4b24ef48c37f87e71bffefc7e2a16e5599",
+                "reference": "2d0b0b4b24ef48c37f87e71bffefc7e2a16e5599",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4",
                 "robertwesner/dependency-injection": "^v1.3.0",
-                "robertwesner/simple-mvc-php": "^0.10.0"
+                "robertwesner/simple-mvc-php": "^0.10.0 || ^0.11.0"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "^3.10.2"
@@ -609,9 +609,134 @@
             ],
             "support": {
                 "issues": "https://github.com/RobertWesner/simple-mvc-php-demo-bundle/issues",
-                "source": "https://github.com/RobertWesner/simple-mvc-php-demo-bundle/tree/v1.0.0"
+                "source": "https://github.com/RobertWesner/simple-mvc-php-demo-bundle/tree/v1.0.1"
             },
-            "time": "2025-06-04T18:05:25+00:00"
+            "time": "2025-06-08T14:35:15+00:00"
+        },
+        {
+            "name": "robertwesner/simple-mvc-php-spawner-bundle",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle.git",
+                "reference": "41b7b6060cc92c38d5e0fd1dd67d9dec3462822a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobertWesner/simple-mvc-php-spawner-bundle/zipball/41b7b6060cc92c38d5e0fd1dd67d9dec3462822a",
+                "reference": "41b7b6060cc92c38d5e0fd1dd67d9dec3462822a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4",
+                "robertwesner/dependency-injection": "^v1.3.0",
+                "robertwesner/simple-mvc-php": "^0.10.1 || ^0.11.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.3.1",
+                "squizlabs/php_codesniffer": "^3.10.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobertWesner\\SimpleMvcPhpSpawnerBundle\\": "src/",
+                    "RobertWesner\\SimpleMvcPhpSpawnerBundle\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RobertWesner",
+                    "email": "robert@wesner.io"
+                }
+            ],
+            "description": "Run background tasks that do not produce synchronous output or require monitoring.",
+            "support": {
+                "issues": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle/issues",
+                "source": "https://github.com/RobertWesner/simple-mvc-php-spawner-bundle/tree/v1.0.1"
+            },
+            "time": "2025-06-08T14:34:53+00:00"
+        },
+        {
+            "name": "scrivo/highlight.php",
+            "version": "v9.18.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scrivo/highlight.php.git",
+                "reference": "850f4b44697a2552e892ffe71490ba2733c2fc6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/850f4b44697a2552e892ffe71490ba2733c2fc6e",
+                "reference": "850f4b44697a2552e892ffe71490ba2733c2fc6e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.7",
+                "sabberworm/php-css-parser": "^8.3",
+                "symfony/finder": "^2.8|^3.4|^5.4",
+                "symfony/var-dumper": "^2.8|^3.4|^5.4"
+            },
+            "suggest": {
+                "ext-mbstring": "Allows highlighting code with unicode characters and supports language with unicode keywords"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "HighlightUtilities/functions.php"
+                ],
+                "psr-0": {
+                    "Highlight\\": "",
+                    "HighlightUtilities\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Geert Bergman",
+                    "homepage": "http://www.scrivo.org/",
+                    "role": "Project Author"
+                },
+                {
+                    "name": "Vladimir Jimenez",
+                    "homepage": "https://allejo.io",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Martin Folkers",
+                    "homepage": "https://twobrain.io",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Server side syntax highlighter that supports 185 languages. It's a PHP port of highlight.js",
+            "keywords": [
+                "code",
+                "highlight",
+                "highlight.js",
+                "highlight.php",
+                "syntax"
+            ],
+            "support": {
+                "issues": "https://github.com/scrivo/highlight.php/issues",
+                "source": "https://github.com/scrivo/highlight.php"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/allejo",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-17T21:53:22+00:00"
         },
         {
             "name": "softcreatr/jsonpath",

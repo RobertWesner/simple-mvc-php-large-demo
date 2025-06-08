@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Spawner</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            main {
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            #output {
+                display: block;
+                padding: 0.4rem;
+                border: 1px solid gray;
+            }
+
+            #output:empty::after {
+                content: 'No content yet...';
+                color: gray;
+            }
+
+            form > label {
+                margin-bottom: 0.4rem;
+                display: flex;
+                gap: 0.4rem;
+            }
+
+            form > label > input {
+                flex: 1;
+                text-align: right;
+            }
+
+            form > button {
+                display: block;
+                width: 100%;
+            }
+
+            #info {
+                border-radius: 1rem;
+                background-color: #98e8dd;
+                border: 1px solid #1f4343;
+                color: #1f4343;
+                padding: 1rem;
+            }
+        </style>
+        <script>
+            window.addEventListener('load', () => {
+                document.querySelector('form').addEventListener('submit', event => {
+                    event.preventDefault();
+
+                    fetch('/api/spawner/start-count', {
+                        method: 'POST',
+                        body: new FormData(event.target),
+                    });
+                });
+
+                const output = document.querySelector('#output');
+                setInterval(() => {
+
+                    fetch('/api/spawner/count')
+                        .then(response => response.text())
+                        .then(text => output.textContent = text);
+                }, 1000);
+            });
+        </script>
+    </head>
+    <body>
+        <main>
+            <h1>Spawner</h1>
+            <p>
+                <a href="/">Return to main page...</a>
+            </p>
+            <form>
+                <label>
+                    Minimum <input name="min" type="number" value="1">
+                </label>
+                <label>
+                    Maximum <input name="max" type="number" max="600" value="10">
+                </label>
+                <label>
+                    Step <input name="step" type="number" min="1" max="100" value="3">
+                </label>
+                <button type="submit">
+                    Run
+                </button>
+            </form>
+            <pre><code id="output"></code></pre>
+            <div id="info">
+                This is the demo page for the spawner bundle which runs background tasks asynchronously launched from your main server thread.<br>
+                Due to performance reasons, only <strong>one count job</strong> will be run at a given time <strong>in this demo</strong> and will reject parallel jobs.
+                You can run any amount of parallel jobs in your server.<br>
+                The demo job will slowly count from a number to a limit with the given step increments, while the browser asynchronously fetches the whole file content produced by the job.<br>
+                By design no direct communication with the job is possible as it is intended to "fire and forget".
+            </div>
+        </main>
+    </body>
+</html>
